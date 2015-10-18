@@ -2,7 +2,6 @@
 
 all : FreeRTOSConfig.h
 
-$(info cc is ${CC})
 SYSROOT := $(shell ${CC} -print-sysroot)
 DESTDIR ?= /
 
@@ -17,4 +16,4 @@ install : FreeRTOSConfig.h
 	install -dm755 ${DESTDIR}${SYSROOT}/include
 	install -m644 -t ${DESTDIR}${SYSROOT}/include $^ portmacro.h
 
-check depends makedepends :
+check depends makedepends checkdepends :
