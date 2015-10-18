@@ -44,4 +44,4 @@ value($flags{'CONFIG_FREERTOS_KERNEL_INTERRUPT_PRIORITY'}, sub {printf("#define 
 value($flags{'CONFIG_FREERTOS_MAX_SYSCALL_INTERRUPT_PRIORITY'}, sub {printf("#define configMAX_SYSCALL_INTERRUPT_PRIORITY ( %d )\n", shift)});
 
 say "";
-say "#endif /* FREERTOS_CONFIG_H * /";
+say "#endif /* FREERTOS_CONFIG_H */";
