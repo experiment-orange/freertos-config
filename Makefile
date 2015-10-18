@@ -13,7 +13,7 @@ FreeRTOSConfig.h : ../.config
 	@./generator <$^ >$@
 
 install : FreeRTOSConfig.h
-	install -dm755 ${DESTDIR}${SYSROOT}/include
-	install -m644 -t ${DESTDIR}${SYSROOT}/include $^ portmacro.h
+	@install -dm755 ${DESTDIR}${SYSROOT}/include
+	@install -m644 -t ${DESTDIR}${SYSROOT}/include $^ portmacro.h
 
 check depends makedepends checkdepends :
