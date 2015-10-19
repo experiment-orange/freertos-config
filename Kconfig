@@ -350,6 +350,30 @@ config FREERTOS_INCLUDE_APPLICATION_DEFINED_PRIVILEGED_FUNCTIONS
     having a .h extension, the header file should contain the implementation of the C functions, not just
     the functions' prototypes.
 
+config FREERTOS_INCLUDE_VTASKPRIORITYSET
+    bool "Enable vTaskPrioritySet()"
+    default n
+
+config FREERTOS_INCLUDE_UXTASKPRIORITYGET
+    bool "Enable uxTaskPriorityGet()"
+    default n
+
+config FREERTOS_INCLUDE_VTASKDELETE
+    bool "Enable vTaskDelete()"
+    default n
+
+config FREERTOS_INCLUDE_VTASKSUSPEND
+    bool "Enable vTaskSuspend()"
+    default n
+
+config FREERTOS_INCLUDE_VTASKDELAYUNTIL
+    bool "Enable vTaskDelayUntil()"
+    default n
+
+config FREERTOS_INCLUDE_VTASKDELAY
+    bool "Enable vTaskDelay()"
+    default n
+
 endmenu
 
 menu "Debug"

@@ -42,6 +42,12 @@ value($flags{'CONFIG_FREERTOS_MAX_PRIORITIES'}, sub {printf("#define configMAX_P
 value($flags{'CONFIG_FREERTOS_MAX_CO_ROUTINE_PRIORITIES'}, sub {printf("#define configMAX_CO_ROUTINE_PRIORITIES ( %d )\n", shift)});
 value($flags{'CONFIG_FREERTOS_KERNEL_INTERRUPT_PRIORITY'}, sub {printf("#define configKERNEL_INTERRUPT_PRIORITY ( %d )\n", shift)});
 value($flags{'CONFIG_FREERTOS_MAX_SYSCALL_INTERRUPT_PRIORITY'}, sub {printf("#define configMAX_SYSCALL_INTERRUPT_PRIORITY ( %d )\n", shift)});
+say "#define INCLUDE_vTaskPrioritySet ".yn($flags{'CONFIG_FREERTOS_INCLUDE_VTASKPRIORITYSET'});
+say "#define INCLUDE_uxTaskPriorityGet ".yn($flags{'CONFIG_FREERTOS_INCLUDE_UXTASKPRIORITYGET'});
+say "#define INCLUDE_vTaskDelete ".yn($flags{'CONFIG_FREERTOS_INCLUDE_VTASKDELETE'});
+say "#define INCLUDE_vTaskSuspend ".yn($flags{'CONFIG_FREERTOS_INCLUDE_VTASKSUSPEND'});
+say "#define INCLUDE_vTaskDelayUntil ".yn($flags{'CONFIG_FREERTOS_INCLUDE_VTASKDELAYUNTIL'});
+say "#define INCLUDE_vTaskDelay ".yn($flags{'CONFIG_FREERTOS_INCLUDE_VTASKDELAY'});
 
 say "";
 say "#endif /* FREERTOS_CONFIG_H */";
